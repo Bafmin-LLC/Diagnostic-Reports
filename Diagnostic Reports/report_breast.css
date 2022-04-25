@@ -1,0 +1,25 @@
+.image_cnt img {
+    max-width: 250px;
+    padding-top: 25px;
+}
+
+.descrip {
+    flex-wrap: wrap;
+}
+
+.descrip>div {
+    padding: 0 5px;
+}
+
+.descrip .notes {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.black_bg {
+    background-color: #262E31 !important;
+}
+
+.findings{
+    page-break-inside: avoid;
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J7Y-7I-ra5">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaSoft-SemiBold.ttf">
+            <string>ProximaSoft-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Diagnostic_Reports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGy-rJ-VcT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVi-Ok-Sim">
+                                <rect key="frame" x="30" y="150" width="315" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Paper Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2K-Xc-hqt">
+                                        <rect key="frame" x="15" y="5" width="295" height="40"/>
+                                        <fontDescription key="fontDescription" name="ProximaSoft-SemiBold" family="Proxima Soft" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="jJ5-BP-aKh"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="X2K-Xc-hqt" firstAttribute="leading" secondItem="MVi-Ok-Sim" secondAttribute="leading" constant="15" id="7fI-BB-zRP"/>
+                                    <constraint firstAttribute="height" constant="50" id="OzF-6g-nej"/>
+                                    <constraint firstAttribute="trailing" secondItem="X2K-Xc-hqt" secondAttribute="trailing" constant="5" id="QaV-OJ-QZ2"/>
+                                    <constraint firstAttribute="bottom" secondItem="X2K-Xc-hqt" secondAttribute="bottom" constant="5" id="aAK-cI-10c"/>
+                                    <constraint firstItem="X2K-Xc-hqt" firstAttribute="top" secondItem="MVi-Ok-Sim" secondAttribute="top" constant="5" id="ahn-Nw-H7Z"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lpC-r0-P9C">
+                                <rect key="frame" x="30" y="230" width="315" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-i0-Yxg">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                        <color key="backgroundColor" red="0.1529411765" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Lr1-hz-9Ko"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Breast Report">
+                                            <fontDescription key="titleFontDescription" name="ProximaSoft-SemiBold" family="Proxima Soft" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="click_onBreatReportBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEJ-t9-m7b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45y-nX-q9T">
+                                        <rect key="frame" x="0.0" y="70" width="315" height="50"/>
+                                        <color key="backgroundColor" red="0.1529411765" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MYh-0A-rUl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Thyroid Report">
+                                            <fontDescription key="titleFontDescription" name="ProximaSoft-SemiBold" family="Proxima Soft" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="click_onThyroidReportBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ge-dp-ouh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3MT-5N-NcA">
+                                <rect key="frame" x="172.5" y="80" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EUM-Lr-Jqu"/>
+                                    <constraint firstAttribute="width" constant="30" id="ojy-GY-sNj"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lpC-r0-P9C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="44Z-uO-Ae4"/>
+                            <constraint firstItem="3MT-5N-NcA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="81o-V9-Oky"/>
+                            <constraint firstItem="lpC-r0-P9C" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8e9-Dz-eOW"/>
+                            <constraint firstItem="MVi-Ok-Sim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Dhw-Gc-WLP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bGy-rJ-VcT" secondAttribute="trailing" id="HQd-Qj-dmE"/>
+                            <constraint firstItem="MVi-Ok-Sim" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="O8z-26-oef"/>
+                            <constraint firstItem="bGy-rJ-VcT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XGW-w1-eiQ"/>
+                            <constraint firstItem="lpC-r0-P9C" firstAttribute="top" secondItem="MVi-Ok-Sim" secondAttribute="bottom" constant="30" id="hir-A7-wVv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lpC-r0-P9C" secondAttribute="trailing" constant="30" id="lka-6K-04a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bGy-rJ-VcT" secondAttribute="bottom" id="mFa-8t-6cd"/>
+                            <constraint firstItem="bGy-rJ-VcT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="n08-9W-Dlq"/>
+                            <constraint firstItem="MVi-Ok-Sim" firstAttribute="top" secondItem="3MT-5N-NcA" secondAttribute="bottom" constant="40" id="r5n-Uf-22c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MVi-Ok-Sim" secondAttribute="trailing" constant="30" id="vdw-8u-LSr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z5X-tM-e2e"/>
+                    <connections>
+                        <outlet property="TFview" destination="MVi-Ok-Sim" id="JcS-gm-dV6"/>
+                        <outlet property="btn_breast" destination="dqg-i0-Yxg" id="fBb-RS-eWL"/>
+                        <outlet property="btn_thyroid" destination="45y-nX-q9T" id="u28-SY-2xM"/>
+                        <outlet property="indicator" destination="3MT-5N-NcA" id="OgL-84-KWK"/>
+                        <outlet property="txt_paper" destination="X2K-Xc-hqt" id="bro-34-T6S"/>
+                        <outlet property="webView" destination="bGy-rJ-VcT" id="9e3-2N-SXn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="90"/>
+        </scene>
+        <!--ViewC-->
+        <scene sceneID="A9R-1d-KJh">
+            <objects>
+                <viewController storyboardIdentifier="PDFViewC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1vU-PU-tMW" customClass="PDFViewC" customModule="Diagnostic_Reports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o1d-Sd-3jY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pg9-wO-ZIz">
+                                <rect key="frame" x="280" y="10" width="90" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiO-5D-V5Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_print"/>
+                                        <connections>
+                                            <action selector="click_onPrintBtn:" destination="1vU-PU-tMW" eventType="touchUpInside" id="3GK-Zy-XlL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDF-zE-2xF">
+                                        <rect key="frame" x="50" y="0.0" width="40" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_close"/>
+                                        <connections>
+                                            <action selector="click_onCloseBtn:" destination="1vU-PU-tMW" eventType="touchUpInside" id="Di8-NV-53n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="M7x-lk-NKL"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cV1-OO-3yO" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pgj-0r-p7f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cV1-OO-3yO" firstAttribute="top" secondItem="Pg9-wO-ZIz" secondAttribute="bottom" id="6EV-Os-ngo"/>
+                            <constraint firstAttribute="bottom" secondItem="cV1-OO-3yO" secondAttribute="bottom" id="FTU-BP-Zog"/>
+                            <constraint firstItem="Pg9-wO-ZIz" firstAttribute="top" secondItem="Pgj-0r-p7f" secondAttribute="top" constant="10" id="PsU-Nu-c1z"/>
+                            <constraint firstItem="Pgj-0r-p7f" firstAttribute="trailing" secondItem="cV1-OO-3yO" secondAttribute="trailing" id="cxN-ip-8YO"/>
+                            <constraint firstItem="Pg9-wO-ZIz" firstAttribute="trailing" secondItem="Pgj-0r-p7f" secondAttribute="trailing" constant="-5" id="dfz-r2-pv2"/>
+                            <constraint firstItem="cV1-OO-3yO" firstAttribute="leading" secondItem="Pgj-0r-p7f" secondAttribute="leading" id="eYn-gi-umk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_close" destination="YDF-zE-2xF" id="qRW-sT-mhc"/>
+                        <outlet property="btn_print" destination="IiO-5D-V5Z" id="9pK-Z4-22n"/>
+                        <outlet property="pdfView" destination="cV1-OO-3yO" id="RjT-TA-LoR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3RW-aO-mni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="89.505247376311857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="455-BB-kvK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="J7Y-7I-ra5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7eq-Zf-0B9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xp5-7h-Z4j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58j-r0-yMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.199999999999999" y="89.505247376311857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close" width="30" height="30"/>
+        <image name="ic_print" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
